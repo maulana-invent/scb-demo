@@ -18,7 +18,7 @@ describe('SCB Dashboard – Login Feature: Positive Test Case', () => {
     // cy.wait(10000)
   });
 
-  it.only('[POSITIVE✅] Password field allows special characters', () => {
+  it('[POSITIVE✅] Password field allows special characters', () => {
     
     loginPage.loginAs(users.validCredentialWithSpecialChars);
 
