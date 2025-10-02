@@ -43,7 +43,6 @@ describe('SCB Dashboard – Login Feature: Negative Test Case', () => {
   it('[NEGATIVE❌] Login attempt with incorrect email or password', () => {
     // Case 1: Valid username, wrong password
     loginPage.loginAs(users.invalidPassword)
-    cy.wait(3000)
     cy.contains('Wrong email or password').should('be.visible')
 
     // Re-visit login page
@@ -51,7 +50,6 @@ describe('SCB Dashboard – Login Feature: Negative Test Case', () => {
 
     // Case 2: wrong username, wrong password
     loginPage.loginAs(users.invalidBoth)
-    cy.wait(3000)
     cy.contains('Wrong email or password').should('be.visible')
   })
 
