@@ -18,22 +18,16 @@ describe('SCB Dashboard – Login Feature: Positive Test Case', () => {
     // cy.wait(10000)
   });
 
-  it('[POSITIVE✅] Password field allows special characters', () => {
+  it.only('[POSITIVE✅] Password field allows special characters', () => {
     
     loginPage.loginAs(users.validCredentialWithSpecialChars);
 
     // cy.wait(10000)
+    cy.document().should('have.property', 'readyState', 'complete')
 
-    // Verify successful login
-    cy.url().then(url => {
-      if (url.includes('/home')) {
-        // success login, dashboard page is appeared
-        cy.contains('Dashboard').should('be.visible')
-      } else {
-        // failed login, check error message
-        cy.contains('Wrong email or password').should('be.visible')
-      }
-    })
+    // Should be directed to dashboard page
+    dashboardPage.verifyDashboardPage()
+    
   })
 
   it('[POSITIVE✅] Login with Remember Me checked should remember the username/session', () => {
