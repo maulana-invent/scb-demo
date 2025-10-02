@@ -15,14 +15,14 @@ describe('SCB Dashboard – Login Feature: Positive Test Case', () => {
 
     // Should be directed to dashboard page
     dashboardPage.verifyDashboardPage()
-    cy.wait(10000)
+    // cy.wait(10000)
   });
 
   it('[POSITIVE✅] Password field allows special characters', () => {
     
     loginPage.loginAs(users.validCredentialWithSpecialChars);
 
-    cy.wait(10000)
+    // cy.wait(10000)
 
     // Verify successful login
     cy.url().then(url => {
