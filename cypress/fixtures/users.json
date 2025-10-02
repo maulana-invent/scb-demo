@@ -1,0 +1,23 @@
+{
+  "validUser": {
+    "username": "maulana@inventgraphic.com",
+    "password": "628RL3LgkVIn"
+  },
+  "validCredentialWithSpecialChars": {
+    "username": "maulana@inventgraphic.com",
+    "password": "628RL3LgkVIn"
+  },
+
+  "invalidPassword": {
+    "username": "admin_user",
+    "password": "WrongPass"
+  },
+  "invalidBoth": {
+    "username": "WrongUser",
+    "password": "WrongPassword"
+  },
+  "emptyFields": {
+    "username": "",
+    "password": ""
+  }
+}
