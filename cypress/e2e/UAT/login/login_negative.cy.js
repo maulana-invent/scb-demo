@@ -3,7 +3,7 @@ import loginPage from '../../../pageObjects/LoginPage'
 import dashboardPage from '../../../pageObjects/DashboardPage'
 import users from '../../../fixtures/users.json'
 
-describe('SCB Dashboard – Login Suite', () => {
+describe('SCB Dashboard – Login Feature: Negative Test Case', () => {
 
   beforeEach(() => {
     // Set base url automatically via cypress.config.js

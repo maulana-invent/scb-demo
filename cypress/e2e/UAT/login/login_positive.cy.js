@@ -3,7 +3,7 @@ import loginPage from '../../../pageObjects/LoginPage'
 import dashboardPage from '../../../pageObjects/DashboardPage'
 import users from '../../../fixtures/users.json'
 
-describe('SCB Dashboard – Login Suite', () => {
+describe('SCB Dashboard – Login Feature: Positive Test Case', () => {
 
   beforeEach(() => {
     // Set base url automatically via cypress.config.js
@@ -64,7 +64,7 @@ describe('SCB Dashboard – Login Suite', () => {
     // loginPage.getUsernameField().should('have.value', validUsername)
   });
 
-  it.only('[POSITIVE✅] Login with Remember Me unchecked should NOT remember the username/session', () => {
+  it('[POSITIVE✅] Login with Remember Me unchecked should NOT remember the username/session', () => {
     loginPage.fillUsername(users.validUser.username)
     loginPage.fillPassword(users.validUser.password)
 
